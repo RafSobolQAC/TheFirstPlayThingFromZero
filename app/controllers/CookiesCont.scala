@@ -23,8 +23,7 @@ class CookiesCont @Inject()(cc: ControllerComponents) extends AbstractController
 
   def eatCookie = Action { implicit request: Request[AnyContent] =>
 
-    Ok("Eaten "+
-      request.cookies
+    Ok(request.cookies
       .get("isDone") match {
       case None => ""
       case Some(cookie) => cookie.value

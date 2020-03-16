@@ -1,0 +1,7 @@
+@import model.Person
+@(personList: List[Person])
+<ul>
+    @for(i <- personList.indices) {
+        <h3>@("Name: "+personList(i).name+" Age: "+personList(i).age)</h3>
+    }
+</ul>
