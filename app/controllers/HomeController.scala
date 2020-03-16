@@ -1,7 +1,7 @@
 package controllers
 
 import javax.inject._
-import model.Person
+import models.Person
 import play.api.mvc._
 
 /**

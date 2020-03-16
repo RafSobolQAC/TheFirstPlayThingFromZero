@@ -1,7 +1,11 @@
-@import model.Person
+@import models.Person
 @(personList: List[Person])
+
+@display(person: Person) = {
+    <h3>@person.name age: @person.age</h3>
+}
 <ul>
     @for(i <- personList.indices) {
-        <h3>@("Name: "+personList(i).name+" Age: "+personList(i).age)</h3>
+        @display(personList(i))
     }
 </ul>
